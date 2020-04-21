@@ -2,5 +2,5 @@
 *.pyc
 teste.py
 ___pycache___/
-/Uteis
-/UtilidadesCeV
+../Uteis
+../UtilidadesCeV
