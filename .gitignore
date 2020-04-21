@@ -2,3 +2,5 @@
 *.pyc
 teste.py
 ___pycache___/
+_Desafio111/*
+!Desafio111/__init__.py

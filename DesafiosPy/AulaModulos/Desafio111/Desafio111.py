@@ -1,5 +1,5 @@
 from UtilidadesCeV import Moeda
 from UtilidadesCeV import Dados
 
-p = float(input('Digite um valor: '))
+p = Dados.leiaDinheiro()
 Moeda.resumo(p,80,35)
