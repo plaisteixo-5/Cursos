@@ -2,4 +2,5 @@
 *.pyc
 teste.py
 ___pycache___/
-__init__.py
+/Uteis
+/UtilidadesCeV
