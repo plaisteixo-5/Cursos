@@ -1,3 +1,5 @@
 #n sei
 *.pyc
 teste.py
+___pycache___/
+__init__/
