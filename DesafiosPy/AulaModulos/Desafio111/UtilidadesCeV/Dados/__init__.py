@@ -1,7 +1,7 @@
 def leiaDinheiro():
     while True:
-        n = str(input('Digite o preço: R$')).strip()
-        if n.isnumeric():
-            return float(n)
+        n = str(input('Digite o preço: R$')).strip().replace(",",".").lower()
+        if n.isalpha() or n.islower() or n == '':
+            print(f'\033[0;31mERRO: \"{n}\" é um valor inválido\033[m')
         else:
-            print(f'ERRO: \"{n}\" é um valor inválido')
+            return float(n)
