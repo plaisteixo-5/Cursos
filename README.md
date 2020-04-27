@@ -7,4 +7,3 @@ Repositório utilizado para colocar os projetos e as atividades desenvolvidas em
 
 * [Quarentena Dev](https://github.com/plaisteixo-5/Cursos/tree/master/DevQuarentena)
    * Curso promovido pela [alura](https://www.alura.com.br/quarentenadev) no período da quarentena, onde foi introduzido de maneira simples HTML,CSS e JavaScript.
-***
