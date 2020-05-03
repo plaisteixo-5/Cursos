@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="botao">Criar bloco</button>
+    <div class="bloco"></div>
+    <script>
+        var botaoElement = document.querySelector('body button.botao');
+        var blocoElement = document.querySelector('body div.bloco');
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";  
+            var color = "#";  
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];  
+            }  
+            return color;
+        }
+
+        botaoElement.onclick = function(){
+            var quadroElement = document.createElement('div') ;
+    
+            quadroElement.style.width = '100px';
+            quadroElement.style.height = '100px';
+            quadroElement.style.backgroundColor = getRandomColor();
+
+            quadroElement.onmouseover = function (){
+                quadroElement.style.backgroundColor = getRandomColor();
+            }
+
+            blocoElement.appendChild(quadroElement);
+        }
+    </script>
+</body>
+</html>
