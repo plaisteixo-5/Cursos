@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <ul class="lista"></ul>
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            let list = document.querySelector('.lista');
+
+            for(let i = 0 ; i < nomes.length ; i++){
+                let novo = document.createElement('li');
+                let nome = document.createTextNode(nomes[i]);
+                novo.appendChild(nome);
+                list.appendChild(novo);
+            }
+
+        </script>
+    </body>
+</html>
