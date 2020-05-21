@@ -1,52 +1,51 @@
-var listElement = document.querySelector('#app ul');
-var inputElement = document.querySelector('#app input');
-var buttonElement = document.querySelector('#app button');
+var elementInput = document.querySelector('#app input')
+var elementList = document.querySelector('#app ul')
+var elementButton = document.querySelector('#app button')
 
-var todos = JSON.parse(localStorage.getItem('list_todos'));
+var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
 
-function renderTodos() {
+function renderTodo() {
 
-    listElement.innerHTML = '';
+    elementList.innerHTML = '';
 
-    for (item of todos){
-        var todoElement = document.createElement('li');
-        var todoText = document.createTextNode(item);
+    for(item of todos) {
+        let todoElement = document.createElement('li');
+        let textoT = document.createTextNode(item);
 
-        var linkElement = document.createElement('a');
-
-        linkElement.setAttribute('href', '#');
-
-        var linkText = document.createTextNode('Excluir');
-
-        linkElement.appendChild(linkText);
+        let linkT = document.createElement('a');
+        let linkText = document.createTextNode('Excluir');
+        linkT.setAttribute('href', '#')
 
         var pos = todos.indexOf(item);
-        linkElement.setAttribute('onclick','deleteTodo(' + pos + ')');
-        
-        todoElement.appendChild(todoText);
-        todoElement.appendChild(linkElement);
-        listElement.appendChild(todoElement);
+        linkT.setAttribute('onclick','deleteTodo('+pos+')')
+
+        linkT.appendChild(linkText);
+
+        todoElement.appendChild(textoT);
+        todoElement.appendChild(linkT);
+        elementList.appendChild(todoElement);
     }
 }
 
-renderTodos();
-
 function addTodo() {
-    var todoText = inputElement.value;
+    var todoText = elementInput.value;
+
     todos.push(todoText);
-    inputElement.value = '';
-    renderTodos();
+    elementInput.value = '';
+    renderTodo();
     saveToStorage();
 }
 
-buttonElement.onclick = addTodo;
+elementButton.onclick = addTodo;
 
-function deleteTodo(pos){
+function deleteTodo(pos) {
     todos.splice(pos, 1);
-    renderTodos();
+    renderTodo();
     saveToStorage();
 }
+
+renderTodo();
 
 function saveToStorage() {
     localStorage.setItem('list_todos', JSON.stringify(todos));
-};
+}
