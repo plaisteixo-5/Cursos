@@ -11,10 +11,20 @@ export default class App extends Component {
         ]
     }
 
+    handleChangeName = () => {
+        this.setState({
+            users: [
+                { name: 'Fon', age:19 },
+                { name: 'Marilene', age:42 },
+                { name: 'Camila', age:32 }
+            ]
+        })
+    }
+
     render(){
         return(
             <>
-                <h1>Users</h1>
+                <h1 onClick={() => this.handleChangeName()}>Users</h1>
                 <UserInput />
                 <UserOutput name={this.state.users[0].name} age={this.state.users[0].age} />
                 <UserOutput name={this.state.users[1].name} age={this.state.users[1].age}/>
