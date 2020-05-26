@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+}
+
+.container button {
+    width: 23%;
+    align-self: center;
+}
+
+.containerName{
+    border: 2px solid black;
+    width: 50%;
+    margin-bottom: 2%;
+    align-self: center;
+    padding-bottom: 2%;
+}
