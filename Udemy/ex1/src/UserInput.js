@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function UserOutput() {
+export default function UserOutput(props) {
     return(
-        <input type="text" />
+        <input onChange={ props.change } type="text" />
     )
 }
