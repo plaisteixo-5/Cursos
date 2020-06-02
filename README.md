@@ -2,7 +2,7 @@
 Repositório utilizado para colocar os projetos e as atividades desenvolvidas em cursos.
 ***
 
-* [Curso em Vídeo - Python] :snake: (https://github.com/plaisteixo-5/Cursos/tree/master/CursoEmVideoPython)
+* [Curso em Vídeo - Python](https://github.com/plaisteixo-5/Cursos/tree/master/CursoEmVideoPython) :snake: 
    * Atividades realizadas durante o curso de Python realizado pelo [Curso Em Vídeo](https://www.youtube.com/user/cursosemvideo/featured).
 
 * [Quarentena Dev](https://github.com/plaisteixo-5/Cursos/tree/master/DevQuarentena)
