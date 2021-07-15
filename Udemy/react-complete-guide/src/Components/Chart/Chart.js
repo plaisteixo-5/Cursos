@@ -1,5 +1,4 @@
-import { isExtensible } from "harmony-reflect";
-import Reach from "react";
+import React from "react";
 
 import ChartBar from "./CharBar";
 import "./Chart.css";
